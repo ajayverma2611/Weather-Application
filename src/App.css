@@ -1,0 +1,370 @@
+/* General Container */
+.container {
+  max-width: 1080px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Theme */
+body[data-theme="light"] {
+  background-color: #f8f9fa;
+  color: #222;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Theme */
+body[data-theme="dark"] {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Theming for Text */
+h1, h2, h3, p, label {
+  transition: color 0.3s ease;
+}
+
+/* Toggle Button */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dark Mode Button Styling */
+body[data-theme="dark"] .theme-toggle {
+  background: linear-gradient(135deg, #2c3e50, #1a1a1a);
+  color: #ffffff;
+}
+
+/* Hover & Active Effects */
+.theme-toggle:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Empty State Styling */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.empty-state h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: inherit;
+}
+
+.empty-state .subtext {
+  font-size: 18px;
+  color: inherit;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  min-width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature span {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Weather Illustration */
+.weather-illustration {
+  position: relative;
+  height: 120px;
+  margin: 0 auto 30px;
+  width: 200px;
+}
+
+.sun {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #FFD700;
+  border-radius: 50%;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 30px #FFD700;
+}
+
+.cloud {
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  background: #ECF0F1;
+  border-radius: 20px;
+  top: 50px;
+  left: 55%;
+}
+
+.cloud:before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: #ECF0F1;
+  border-radius: 50%;
+  top: -15px;
+  left: 10px;
+}
+
+.cloud:after {
+  content: '';
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background: #ECF0F1;
+  border-radius: 50%;
+  top: -20px;
+  right: 10px;
+}
+
+.cloud-2 {
+  left: 35%;
+  top: 60px;
+  transform: scale(0.8);
+}
+
+/* Dark Mode Adjustments */
+body[data-theme="dark"] .empty-state {
+  background-color: rgba(30, 30, 30, 0.3);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+body[data-theme="dark"] .feature {
+  background-color: rgba(30, 30, 30, 0.5);
+}
+
+body[data-theme="dark"] .cloud,
+body[data-theme="dark"] .cloud:before,
+body[data-theme="dark"] .cloud:after {
+  background: #bdc3c7;
+}
+
+/* Adding Soft Glow Effect */
+body[data-theme="dark"] .container {
+  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* ==================== */
+/* RESPONSIVE MEDIA QUERIES */
+/* ==================== */
+
+/* Tablet Devices (768px - 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .empty-state {
+    padding: 30px 15px;
+    margin-top: 30px;
+  }
+
+  .empty-state h2 {
+    font-size: 24px;
+  }
+
+  .empty-state .subtext {
+    font-size: 16px;
+  }
+
+  .features {
+    gap: 15px;
+  }
+
+  .feature {
+    padding: 15px;
+    min-width: 120px;
+  }
+
+  .feature span {
+    font-size: 24px;
+  }
+
+  .feature p {
+    font-size: 14px;
+  }
+
+  .weather-illustration {
+    height: 100px;
+    width: 180px;
+    margin-bottom: 20px;
+  }
+
+  .sun {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cloud {
+    width: 70px;
+    height: 25px;
+    top: 45px;
+  }
+
+  .cloud:before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .cloud:after {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Mobile Devices (up to 767px) */
+@media (max-width: 767px) {
+  .container {
+    max-width: 95%;
+    padding: 10px;
+    margin: 10px auto;
+  }
+
+  .theme-toggle {
+    position: relative;
+    top: auto;
+    right: auto;
+    display: block;
+    margin: 0 auto 20px;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .empty-state {
+    padding: 25px 10px;
+    margin-top: 20px;
+    border-radius: 12px;
+  }
+
+  .empty-state h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .empty-state .subtext {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .feature {
+    width: 100%;
+    max-width: 200px;
+    padding: 15px;
+    min-width: auto;
+  }
+
+  .weather-illustration {
+    height: 80px;
+    width: 150px;
+    margin-bottom: 15px;
+  }
+
+  .sun {
+    width: 40px;
+    height: 40px;
+    top: 15px;
+  }
+
+  .cloud {
+    width: 60px;
+    height: 20px;
+    top: 35px;
+  }
+
+  .cloud:before {
+    width: 15px;
+    height: 15px;
+    top: -10px;
+  }
+
+  .cloud:after {
+    width: 25px;
+    height: 25px;
+    top: -15px;
+  }
+
+  .cloud-2 {
+    top: 45px;
+  }
+}
+
+/* Small Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+  .empty-state h2 {
+    font-size: 18px;
+  }
+
+  .empty-state .subtext {
+    font-size: 13px;
+  }
+
+  .feature {
+    padding: 12px;
+  }
+
+  .feature span {
+    font-size: 22px;
+  }
+
+  .feature p {
+    font-size: 13px;
+  }
+}
+

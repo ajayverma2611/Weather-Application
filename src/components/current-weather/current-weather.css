@@ -1,0 +1,186 @@
+.weather {
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    background: linear-gradient(135deg, #4A90E2, #007BFF);
+    margin: 20px auto 0 auto;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Top & Bottom Sections */
+.top,
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* City Name */
+.city {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Weather Description */
+.weather-description {
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: capitalize;
+    opacity: 0.8;
+}
+
+/* Weather Icon */
+.weather-icon {
+    width: 100px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Icon Hover Effect */
+.weather-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Temperature */
+.temperature {
+    font-weight: 700;
+    font-size: 72px;
+    letter-spacing: -3px;
+    margin: 10px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Details Section */
+.details {
+    width: 100%;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+/* Parameter Row */
+.parameter-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+/* Labels & Values */
+.parameter-label {
+    text-align: left;
+    font-weight: 400;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.parameter-value {
+    text-align: right;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Light Mode Styles */
+body[data-theme="light"] .weather {
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    color: #222;
+}
+
+/* Dark Mode Styles */
+body[data-theme="dark"] .weather {
+    background: linear-gradient(135deg, #2c3e50, #1a1a1a);
+    color: #ffffff;
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* ==================== */
+/* RESPONSIVE MEDIA QUERIES */
+/* ==================== */
+
+/* Medium Tablets (600px - 768px) */
+@media (max-width: 768px) {
+    .weather {
+        width: 280px;
+        padding: 18px;
+    }
+    
+    .temperature {
+        font-size: 64px;
+    }
+    
+    .weather-icon {
+        width: 90px;
+    }
+    
+    .city {
+        font-size: 18px;
+    }
+}
+
+/* Small Tablets and Large Phones (480px - 600px) */
+@media (max-width: 600px) {
+    .weather {
+        width: 260px;
+        padding: 16px;
+    }
+    
+    .temperature {
+        font-size: 60px;
+        margin: 8px 0;
+    }
+    
+    .weather-icon {
+        width: 85px;
+    }
+}
+
+/* Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+    .weather {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    .temperature {
+        font-size: 56px;
+        letter-spacing: -2px;
+    }
+    
+    .weather-icon {
+        width: 80px;
+    }
+    
+    .city {
+        font-size: 16px;
+    }
+    
+    .weather-description {
+        font-size: 13px;
+    }
+    
+    .parameter-label,
+    .parameter-value {
+        font-size: 13px;
+    }
+}
+
+/* Small Mobile Devices (up to 360px) */
+@media (max-width: 360px) {
+    .weather {
+        padding: 12px;
+    }
+    
+    .temperature {
+        font-size: 48px;
+    }
+    
+    .weather-icon {
+        width: 70px;
+    }
+    
+    .details {
+        padding-left: 15px;
+    }
+}

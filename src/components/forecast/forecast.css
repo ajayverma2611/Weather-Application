@@ -1,0 +1,163 @@
+/* Title */
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Daily Weather Item */
+.daily-item {
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    height: 50px;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 8px 20px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.daily-item:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+/* Dark Mode */
+body[data-theme="dark"] .daily-item {
+    background-color: #2c3e50;
+    color: #ffffff;
+}
+
+body[data-theme="dark"] .daily-item:hover {
+    background-color: #34495e;
+}
+
+/* Weather Icon */
+.icon-small {
+    width: 40px;
+}
+
+/* Day Name */
+.day {
+    color: #212121;
+    flex: 1 1;
+    font-weight: 600;
+    margin-left: 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Dark Mode for Day */
+body[data-theme="dark"] .day {
+    color: #ffffff;
+}
+
+/* Weather Description */
+.description {
+    flex: 1 1;
+    margin-right: 15px;
+    text-align: right;
+    font-weight: 500;
+}
+
+/* Temperature */
+.min-max {
+    color: #757575;
+    font-weight: 600;
+}
+
+/* Dark Mode for Temp */
+body[data-theme="dark"] .min-max {
+    color: #d1d1d1;
+}
+
+/* Grid Layout for Additional Details */
+.daily-details-grid {
+    display: grid;
+    flex: 1 1;
+    grid-template-columns: auto auto;
+    padding: 10px 15px;
+    gap: 10px;
+}
+
+/* Individual Grid Item */
+.daily-details-grid-item {
+    display: flex;
+    height: 35px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Light Mode Labels */
+.daily-details-grid-item label:first-child {
+    color: #757575;
+    font-weight: 500;
+}
+
+/* Dark Mode Labels */
+body[data-theme="dark"] .daily-details-grid-item label:first-child {
+    color: #b0bec5;
+}
+
+/* Value */
+.daily-details-grid-item label:last-child {
+    color: #212121;
+    font-weight: 600;
+}
+
+/* Dark Mode Value */
+body[data-theme="dark"] .daily-details-grid-item label:last-child {
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .daily-item {
+        height: 45px;
+        font-size: 14px;
+        padding: 6px 15px;
+    }
+
+    .icon-small {
+        width: 35px;
+    }
+}
+
+@media (max-width: 767px) {
+    .daily-item {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .day, .description, .min-max {
+        text-align: left;
+        margin: 5px 0;
+    }
+
+    .daily-details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 20px;
+    }
+    
+    .daily-item {
+        font-size: 13px;
+        padding: 8px;
+    }
+    
+    .icon-small {
+        width: 30px;
+    }
+}
