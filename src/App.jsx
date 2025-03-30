@@ -82,6 +82,9 @@ function App() {
         {currentWeather && <CurrentWeather data={currentWeather} />}
         {forecast && <Forecast data={forecast} />}
       </div>
+      <footer className="footer" style={{ backgroundColor: theme === "light" ? "#f1f1f1" : "#333", color: theme === "light" ? "#000" : "#fff", display: "flex", justifyContent: "center", alignItems: "center", padding: "10px", bottom: 0, width: "auto", marginTop: "78px" }}>
+        &copy; {new Date().getFullYear()} Weather App. All rights reserved.
+      </footer>
     </>
   );
 }
